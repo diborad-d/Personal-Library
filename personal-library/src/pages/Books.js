@@ -1,9 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron/Jumbotron";
 import DeleteButton from "../components/DeleteButton";
-import { Col, Row, Container } from "../components/grid";
+import { Col, Row, Container } from "../components/grid/Container";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import API from "../utils/API";
 
 class Books extends Component {
   state = {
@@ -25,12 +26,12 @@ class Books extends Component {
             <Jumbotron>
               <h1>What Would You like to Read Today? </h1>
             </Jumbotron>
-            <Form>
+            <form>
               <Input name="title" placeholder="Title (required)" />
               <Input name="author" placeholder="Author (required)" />
               <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
               <FormBtn>Submit Book</FormBtn>
-            </Form>
+            </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
